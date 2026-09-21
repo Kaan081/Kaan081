@@ -1,4 +1,4 @@
-# READ.ME# Kaan Bartu Bozkurt
+# Kaan Bartu Bozkurt
 
 **Computer Engineering Student · Indie Game Developer · Software Builder**
 
