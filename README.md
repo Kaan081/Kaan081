@@ -12,11 +12,6 @@ Psychological horror game built with **Unreal Engine 5, C++ and Blueprints**.
 
 **Released September 15, 2026.**
 
-## 🔨 Currently Building
-
-- A second Unreal Engine horror game focused on microphone-driven gameplay, reactive enemy behavior, and rapid gameplay validation.
-- An open-source Python CLI for Git/repository governance and ownership validation.
-
 ## 🛠 Stack
 
 `Unreal Engine 5` · `C++` · `Blueprints` · `Python` · `Git`
