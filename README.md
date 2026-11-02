@@ -46,7 +46,7 @@ A **48-hour, unfinished game jam prototype** featuring grappling movement and a 
 
 - **[booth — PR #31](https://github.com/Vedantgitbot/booth/pull/31) · Merged.** Handled malformed AI model output without crashing, with regression tests; the maintainer verified the fix and merged it.
 - **[newsT — PR #26](https://github.com/StefanOOEOrg/newsT/pull/26) · Merged.** Rejected non-finite sentiment scores (`NaN` / infinities), including numeric strings, with targeted regression coverage.
-- **[Cura AI — PR #120](https://github.com/slealq/cura-ai/pull/120) · Open as of November 2, 2026.** Corrected all-failed image-batch outcomes and made provider errors and partial failures more visible. Local verification: **1,069 backend tests passed** and TypeScript checks passed; no live end-to-end deployment verification claimed.
+- **[Cura AI — PR #121](https://github.com/slealq/cura-ai/pull/121) · Open as of November 2, 2026.** Corrected all-failed image-batch outcomes and made provider errors and partial failures more visible. Local verification: **1,069 backend tests passed** and TypeScript checks passed; no live end-to-end deployment verification claimed.
 
 ## What I can help with
 
