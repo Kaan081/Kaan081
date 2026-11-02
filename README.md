@@ -1,41 +1,59 @@
 # Kaan Bartu Bozkurt
 
-**Software Developer · Python Developer Tools & CI Verification · Unreal Engine 5 Gameplay Systems**
+**Software Developer | Python Tooling, Testing & CI | Unreal Engine 5 Gameplay Systems**
 
-I'm a Computer Engineering student who builds and ships developer tools and systems-driven games. I focus on reproducible results, explicit limitations, and software that can be tested on real workflows.
+I’m a Computer Engineering student building developer tools, investigating reproducible software failures, and developing systems-driven games. My approach is to understand the failure, make a focused change, and verify the result—without overstating what the tests prove.
 
-## Selected work
+**Core tools:** Python · pytest · Git / Git LFS · GitHub Actions · SQL / PostgreSQL · Celery · C++ · Unreal Engine 5 · Blueprints
 
-### [BranchRift — Git integration risk checks](https://github.com/Kaan081/branchrift)
-**Python · Git · Git LFS · CLI · CI**
+[LinkedIn](https://www.linkedin.com/in/kaan-bartu-bozkurt-1b12b043b/) · [GitHub](https://github.com/Kaan081)
 
-A published, read-only Python CLI that analyzes branch divergence, same-path collisions, binary-sensitive Unreal files, Git LFS readiness, ownership gaps, and required verification before integration.
+## Selected engineering work
 
-- Install: [PyPI — branchrift](https://pypi.org/project/branchrift/)
-- Source and release history: [GitHub](https://github.com/Kaan081/branchrift)
-- Designed to report supported evidence and uncertainty, not to auto-merge or guarantee conflict prediction.
+### Developer tools & backend
 
-### [Nativory — Native Upgrade Evidence](https://github.com/Kaan081/Nativory)
-**Python · React Native / Android · Gradle · GitHub Actions · Evidence verification**
+**[BranchRift — Git integration risk CLI](https://github.com/Kaan081/branchrift)**  
+*Python · Git · Git LFS · CLI · CI*
 
-An experimental, evidence-first workflow for inspecting native dependency provenance and verifying narrowly scoped upgrade changes.
+A published, read-only tool that reports branch divergence, same-path changes, binary-sensitive collisions, Git LFS readiness and ownership/review gaps before integration. It provides evidence for a human decision; it does not merge branches or guarantee conflict prediction.  
+[PyPI package](https://pypi.org/project/branchrift/) · [Source code](https://github.com/Kaan081/branchrift)
 
-- The current `main` branch provides a read-only AGP/Gradle compatibility scanner (R02).
-- [Draft PR #2](https://github.com/Kaan081/Nativory/pull/2) contains controlled Expo/FBJNI artifact selection and 4 KiB vs 16 KiB ELF alignment evidence.
-- It does **not** claim to certify an APK, repair a production app, or establish broad upgrade readiness.
+**[Nativory — React Native / Android upgrade evidence](https://github.com/Kaan081/Nativory)**  
+*Python · Gradle · React Native · Evidence verification*
 
-### [False Normality — Released on Steam](https://store.steampowered.com/app/4925070/)
-**Unreal Engine 5 · C++ · Blueprints · Gameplay systems**
+A conservative, read-only experiment for tracing native dependency and compatibility evidence. The current `main` branch supports a scoped AGP/Gradle check; additional Expo/FBJNI and ELF-alignment research remains in [draft PR #2](https://github.com/Kaan081/Nativory/pull/2). It is not an APK certification or auto-repair tool.
 
-A first-person psychological horror game built around rules that react to the player's behavior. Released on Steam on **September 15, 2026**.
+**[Reprovant — Worker failure experiments](https://github.com/Kaan081/reprovant)**  
+*Python · Celery · PostgreSQL · pytest*
 
-My development focus in our two-person team included gameplay logic, Blueprint systems, AI interactions, and input behavior.
+Research into reproducible worker failure modes, including duplicate effects and state regressions. Includes controlled experiments and explicit evidence boundaries. **Research case study, not a commercially validated product or production certification.**  
+[Evidence case study](https://github.com/Kaan081/reprovant/blob/main/docs/REPROVANT_EVIDENCE_CASE_STUDY.md)
 
-## What I work on
+### Gameplay engineering
 
-- **Developer tooling:** Python CLIs, Git and repository analysis, test automation, structured evidence, CI verification.
-- **Gameplay engineering:** Unreal Engine 5, C++, Blueprints, state-driven mechanics, and rapid prototyping.
+**[False Normality — Psychological horror game](https://store.steampowered.com/app/4925070/)**  
+*Unreal Engine 5 · C++ · Blueprints · Gameplay systems*
 
-I'm interested in focused **freelance and contract projects** where I can deliver and verify a concrete technical result.
+Released on Steam on **September 15, 2026**. In our two-person team, I worked on gameplay logic, Blueprint systems, AI interactions and input behavior.
 
-**Connect:** [LinkedIn](https://www.linkedin.com/in/kaan-bartu-bozkurt-1b12b043b/) · [GitHub](https://github.com/Kaan081)
+**[SON HAT — Supper's Ready / Civil Game Jam 2026](https://github.com/Kaan081/supper-ready-civil-game-jam-2026/tree/integration/son-hat)**  
+*Unreal Engine 5.7 · C++ · Grappling · State-driven gameplay · Automation tests*
+
+A **48-hour, unfinished game jam prototype** featuring grappling movement and a timed rooftop rescue-signaling system. My primary work covered C++ gameplay, rescue-state logic, HUD/interaction behavior, tests and integration. The source is available for technical review; the final city is **not reproducible as a standalone playable build** from the public repository.  
+[Gameplay C++](https://github.com/Kaan081/supper-ready-civil-game-jam-2026/blob/integration/son-hat/Source/UEIntroProject_1/GrappleComponent.cpp) · [Rescue-state logic](https://github.com/Kaan081/supper-ready-civil-game-jam-2026/blob/integration/son-hat/Source/UEIntroProject_1/SonHatEvacuationDirector.cpp) · [Verification limits](https://github.com/Kaan081/supper-ready-civil-game-jam-2026/blob/integration/son-hat/README.md)
+
+## Selected open-source contributions
+
+- **[booth — PR #31](https://github.com/Vedantgitbot/booth/pull/31) · Merged.** Handled malformed AI model output without crashing, with regression tests; the maintainer verified the fix and merged it.
+- **[newsT — PR #26](https://github.com/StefanOOEOrg/newsT/pull/26) · Merged.** Rejected non-finite sentiment scores (`NaN` / infinities), including numeric strings, with targeted regression coverage.
+- **[Cura AI — PR #120](https://github.com/slealq/cura-ai/pull/120) · Open as of November 2, 2026.** Corrected all-failed image-batch outcomes and made provider errors and partial failures more visible. Local verification: **1,069 backend tests passed** and TypeScript checks passed; no live end-to-end deployment verification claimed.
+
+## What I can help with
+
+- Reproducing and fixing focused **Python / pytest / GitHub Actions CI** failures.
+- Investigating **state, retry and data-integrity** bugs, with regression coverage.
+- Building and debugging **Unreal Engine 5 C++ / Blueprint gameplay systems**.
+
+I’m open to scoped freelance and contract work where the expected result and verification criteria are clear.
+
+**Contact:** [LinkedIn](https://www.linkedin.com/in/kaan-bartu-bozkurt-1b12b043b/)
